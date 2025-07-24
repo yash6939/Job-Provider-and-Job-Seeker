@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jobs</title>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header section sterts -->
+
+    <header class="header">
+        <section class="flex">
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+            <a href="index.html" class="logo"><i class="fas fa-briefcase"></i>Job Provider And Job Seeker</a>
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About us</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="contact.html">Contact us</a>
+                <a href="login.html">Account</a>
+            </nav>
+
+            <a href="#" class="btn" style="margin-top: 0;">Post Jobs</a>
+        </section>
+    </header>
+    <!-- header section ends -->
+     
+<!-- Job Filter Section Starts -->
+<section class="job-filter">
+    <h1 class="heading">Filter Jobs</h1>
+    <form action="" method="post">
+        <!-- Job Title and Location Fields -->
+        <div class="flex">
+            <div class="box">
+                <p>Job Title <span>*</span></p>
+                <input type="text" name="title" placeholder="Keyword, category, or company" required maxlength="20" class="input">
+            </div>
+            <div class="box">
+                <p>Job Location</p>
+                <input type="text" name="location" placeholder="Village, town, city, or state" required maxlength="50" class="input">
+            </div>
+        </div>
+
+        <!-- Dropdown Filters -->
+        <div class="dropdown-container">
+            <!-- Date Posted Dropdown -->
+            <div class="dropdown">
+                <input type="text" readonly placeholder="Date Posted" name="date_posted" maxlength="20" class="output">
+                <div class="lists">
+                    <p class="list-item" onclick="selectOption(this, 'date_posted')">Today</p>
+                    <p class="list-item" onclick="selectOption(this, 'date_posted')">3 days ago</p>
+                    <p class="list-item" onclick="selectOption(this, 'date_posted')">7 days ago</p>
+                    <p class="list-item" onclick="selectOption(this, 'date_posted')">10 days ago</p>
+                    <p class="list-item" onclick="selectOption(this, 'date_posted')">15 days ago</p>
+                    <p class="list-item" onclick="selectOption(this, 'date_posted')">30 days ago</p>
+                </div>
+            </div>
+
+            <!-- Salary Range Dropdown -->
+            <div class="dropdown">
+                <input type="text" readonly placeholder="Salary Range" name="salary" maxlength="20" class="output">
+                <div class="lists">
+                    <p class="list-item" onclick="selectOption(this, 'salary')">1k or less</p>
+                    <p class="list-item" onclick="selectOption(this, 'salary')">1k-5k</p>
+                    <p class="list-item" onclick="selectOption(this, 'salary')">5k-10k</p>
+                    <p class="list-item" onclick="selectOption(this, 'salary')">10k-20k</p>
+                    <p class="list-item" onclick="selectOption(this, 'salary')">20k-30k</p>
+                    <p class="list-item" onclick="selectOption(this, 'salary')">30k-40k</p>
+                    <p class="list-item" onclick="selectOption(this, 'salary')">40k-50k</p>
+                </div>
+            </div>
+
+            <!-- Job Type Dropdown -->
+            <div class="dropdown">
+                <input type="text" readonly placeholder="Job Type" name="job_type" maxlength="20" class="output">
+                <div class="lists">
+                    <p class="list-item" onclick="selectOption(this, 'job_type')">Full-time</p>
+                    <p class="list-item" onclick="selectOption(this, 'job_type')">Part-time</p>
+                    <p class="list-item" onclick="selectOption(this, 'job_type')">Internship</p>
+                    <p class="list-item" onclick="selectOption(this, 'job_type')">Contract</p>
+                    <p class="list-item" onclick="selectOption(this, 'job_type')">Temporary</p>
+                    <p class="list-item" onclick="selectOption(this, 'job_type')">Fresher</p>
+                </div>
+            </div>
+
+            <!-- Education Requirement Dropdown -->
+            <div class="dropdown">
+                <input type="text" readonly placeholder="Education Requirement" name="education" maxlength="20" class="output">
+                <div class="lists">
+                    <p class="list-item" onclick="selectOption(this, 'education')">10th pass</p>
+                    <p class="list-item" onclick="selectOption(this, 'education')">12th pass</p>
+                    <p class="list-item" onclick="selectOption(this, 'education')">Bachelor's degree</p>
+                    <p class="list-item" onclick="selectOption(this, 'education')">Master's degree</p>
+                    <p class="list-item" onclick="selectOption(this, 'education')">Diploma</p>
+                </div>
+            </div>
+
+            <!-- Shift Type Dropdown -->
+            <div class="dropdown">
+                <input type="text" readonly placeholder="Shift Type" name="shift_type" maxlength="20" class="output">
+                <div class="lists">
+                    <p class="list-item" onclick="selectOption(this, 'shift_type')">Day-shift</p>
+                    <p class="list-item" onclick="selectOption(this, 'shift_type')">Night-shift</p>
+                    <p class="list-item" onclick="selectOption(this, 'shift_type')">Flexible-shift</p>
+                    <p class="list-item" onclick="selectOption(this, 'shift_type')">Fixed-shift</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- Job Filter Section Ends -->
+
+<!-- JavaScript for Dropdown Selection -->
+<script>
+    function selectOption(element, inputName) {
+        const input = document.querySelector(`input[name="${inputName}"]`);
+        input.value = element.innerText;
+    }
+</script>
+
+
+    <!--All job section starts-->
+
+    <section class="jobs-container">
+        <h1 class="heading">All Jobs</h1>
+        <div class="box-container">
+
+            <!-- Job Box 1 -->
+            <div class="box">
+                <div class="company">
+
+                    <div>
+                        <h3>IT Infosys Co.</h3>
+                        <span>2 Days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">Senior Web Developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i><span>Mumbai, India</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-rupee-sign"></i><span>50k - 75k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>Part-time</span></p>
+                    <p><i class="fas fa-clock"></i><span>Day-shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">View Details</a>
+                    <button type="submit" name="Save"></button>
+                </div>
+            </div>
+
+            <!-- Job Box 2 -->
+            <div class="box">
+                <div class="company">
+
+                    <div>
+                        <h3>All Media Ltd</h3>
+                        <span>1 Day ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">Qualified Developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i><span>Bengaluru, India</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-rupee-sign"></i><span>40k - 1L</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>Full-time</span></p>
+                    <p><i class="fas fa-clock"></i><span>Flexible-shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">View Details</a>
+                    <button type="submit" name="Save"></button>
+                </div>
+            </div>
+
+            <!-- Job Box 3 -->
+            <div class="box">
+                <div class="company">
+
+                    <div>
+                        <h3>Software Solutions</h3>
+                        <span>6 Days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">JavaScript Developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i><span>Delhi, India</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-rupee-sign"></i><span>20k - 35k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>Contract</span></p>
+                    <p><i class="fas fa-clock"></i><span>Flexible-shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">View Details</a>
+                    <button type="submit" name="Save"></button>
+                </div>
+            </div>
+
+            <!-- Job Box 4 -->
+            <div class="box">
+                <div class="company">
+                    <div>
+                        <h3>IT World</h3>
+                        <span>7 Days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">Junior Front-end Developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i><span>Mumbai, India</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-rupee-sign"></i><span>20k - 50k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>Temporary</span></p>
+                    <p><i class="fas fa-clock"></i><span>Fixed-shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">View Details</a>
+                    <button type="submit" name="Save"></button>
+                </div>
+            </div>
+
+            <!-- Job Box 5 -->
+            <div class="box">
+                <div class="company">
+
+                    <div>
+                        <h3>Info Statics</h3>
+                        <span>2 Days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">Junior Assistant</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i><span>Mumbai, India</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-rupee-sign"></i><span>10k - 15k</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>Temporary</span></p>
+                    <p><i class="fas fa-clock"></i><span>Flexible-shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">View Details</a>
+                    <button type="submit" name="Save"></button>
+                </div>
+            </div>
+
+            <!-- Job Box 6 -->
+            <div class="box">
+                <div class="company">
+
+                    <div>
+                        <h3>Mass Idea</h3>
+                        <span>2 Days ago</span>
+                    </div>
+                </div>
+                <h3 class="job-title">PHP Developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i><span>Mumbai, India</span></p>
+                <div class="tags">
+                    <p><i class="fas fa-rupee-sign"></i><span>50k - 1 Lakh</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>Fresher</span></p>
+                    <p><i class="fas fa-clock"></i><span>Day or Night-shift</span></p>
+                </div>
+                <div class="flex-btn">
+                    <a href="view_job.html" class="btn">View Details</a>
+                    <button type="submit" name="Save"></button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--All job section ends-->
+
+        <!-- footer section starts -->
+
+        <footer class="footer">
+
+            <section class="grid">
+                <div class="box">
+                    <h3>Quick Links:</h3>
+                    <a href="index.html"><i class="fas fa-ange-right"></i>Home</a>
+                    <a href="about.html"><i class="fas fa-ange-right"></i>About us</a>
+                    <a href="jobs.html"><i class="fas fa-ange-right"></i>Jobs</a>
+                    <a href="contact.html"><i class="fas fa-ange-right"></i>Contact us</a>
+
+                    <a href="index.html" class="logo"><i class="fas fa-angle-right"></i>Filter Search</a>
+                </div>
+
+                <div class="box">
+                    <h3>Extra Links:</h3>
+                    <a href="#"><i class="fas fa-ange-right"></i>Account</a>
+                    <a href="login.html"><i class="fas fa-ange-right"></i>Login</a>
+                    <a href="register.html"><i class="fas fa-ange-right"></i>Register</a>
+                    <a href="#"><i class="fas fa-ange-right"></i>Post Jobs</a>
+                    <a href="#"><i class="fas fa-ange-right"></i>Dashboard</a>
+                </div>
+
+                <div class="box">
+                    <h3>Follow us:</h3>
+                    <a href="#"><i class="fas fa-twitter"></i>Twitter</a>
+                    <a href="#"><i class="fas fa-facebook"></i>Facebook</a>
+                    <a href="#"><i class="fas fa-instagram"></i>Instagram</a>
+                    <a href="#"><i class="fas fa-linkedin"></i> Linkedin</a>
+                </div>
+                <div class="flex-btn">
+                    <a href="view job.html" class="btn">View Details</a>
+                    <button type="submit" class="far fa-heart" name="Save"></button>
+                </div>
+
+            </section>
+
+            <div class="credit">&copy; copyright @2025 by <span> by team JS & JP</span> |all rights reserved|</div>
+
+        </footer>
+
+</body>
+
+</html>

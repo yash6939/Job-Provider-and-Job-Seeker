@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header section sterts -->
+
+    <header class="header">
+        <section class="flex">
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+            <a href="index.html" class="logo"><i class="fas fa-briefcase"></i>Job Provider And Job Seeker</a>
+
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About us</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="contact.html">Contact us</a>
+                <a href="login.html">Account</a>
+            </nav>
+
+            <a href="#" class="btn" style="margin-top: 0;">Post Jobs</a>
+        </section>
+    </header>
+    <!-- header section ends -->
+
+   <!-- Contact Section Starts -->
+<div class="section-title">Contact Us</div>
+<section class="contact">
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-phone"></i>
+            <h3>Contact Us:</h3>
+            <a href="tel:125121127">125-121-127</a>
+            <a href="tel:125122126">125-122-126</a>
+        </div>
+        <div class="box">
+            <h3>E-mail:</h3>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:JPJS@gmail.com">JPJS@gmail.com</a>
+        </div>
+        <div class="box">
+            <h3>Location:</h3>
+            <i class="fas fa-map-marker-alt"></i>
+            <a href="#">Opp. Government ITI, NH 6, National Highway 6, Ramanand Nagar, Jalgaon, Maharashtra 425001</a>
+        </div>
+    </div>
+
+    <form action="" method="post">
+        <div class="flex">
+            <div class="box">
+                <label for="name">Name <span>*</span></label>
+                <input type="text" id="name" name="name" required maxlength="20" placeholder="Enter your name" class="input">
+            </div>
+            <div class="box">
+                <label for="email">E-mail <span>*</span></label>
+                <input type="email" id="email" name="email" required maxlength="50" placeholder="Enter your email" class="input">
+            </div>
+            <div class="box">
+                <label for="number">Number <span>*</span></label>
+                <input type="tel" id="number" name="number" required pattern="[0-9]{10}" placeholder="Enter your number" class="input">
+            </div>
+            <div class="box">
+                <label for="role">Role <span>*</span></label>
+                <select id="role" name="role" required class="input">
+                    <option value="employee">Job Seeker (Employee)</option>
+                    <option value="employer">Job Provider (Employer)</option>
+                </select>
+            </div>
+        </div>
+        <label for="message">Message <span>*</span></label>
+        <textarea id="message" name="message" class="input" required maxlength="1000" placeholder="Enter your message" cols="30" rows="10"></textarea>
+        <input type="submit" value="Send Message" name="send" class="btn">
+    </form>
+</section>
+<!-- Contact Section Ends -->
+
+
+    <!-- footer section starts -->
+
+    <footer class="footer">
+
+        <section class="grid">
+            <div class="box">
+                <h3>Quick Links:</h3>
+                <a href="index.html"><i class="fas fa-ange-right"></i>Home</a>
+                <a href="about.html"><i class="fas fa-ange-right"></i>About us</a>
+                <a href="jobs.html"><i class="fas fa-ange-right"></i>Jobs</a>
+                <a href="contact.html"><i class="fas fa-ange-right"></i>Contact us</a>
+
+                <a href="index.html" class="logo"><i class="fas fa-angle-right"></i>Filter Search</a>
+            </div>
+
+            <div class="box">
+                <h3>Extra Links:</h3>
+                <a href="#"><i class="fas fa-ange-right"></i>Account</a>
+                <a href="login.html"><i class="fas fa-ange-right"></i>Login</a>
+                <a href="register.html"><i class="fas fa-ange-right"></i>Register</a>
+                <a href="#"><i class="fas fa-ange-right"></i>Post Jobs</a>
+                <a href="#"><i class="fas fa-ange-right"></i>Dashboard</a>
+            </div>
+
+            <div class="box">
+                <h3>Follow us:</h3>
+                <a href="#"><i class="fas fa-twitter"></i>Twitter</a>
+                <a href="#"><i class="fas fa-facebook"></i>Facebook</a>
+                <a href="#"><i class="fas fa-instagram"></i>Instagram</a>
+                <a href="#"><i class="fas fa-linkedin"></i> Linkedin</a>
+            </div>
+            <div class="flex-btn">
+                <a href="view job.html" class="btn">View Details</a>
+                <button type="submit" class="far fa-heart" name="Save"></button>
+            </div>
+
+        </section>
+
+        <div class="credit">&copy; copyright @2025 by <span> by team JS & JP</span> |all rights reserved|</div>
+
+    </footer>
+
+</body>
+
+</html>
